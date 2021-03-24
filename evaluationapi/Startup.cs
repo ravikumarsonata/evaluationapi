@@ -39,7 +39,7 @@ namespace evaluationapi
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API Version 21");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API Version 211");
             });
             if (env.IsDevelopment())
             {
