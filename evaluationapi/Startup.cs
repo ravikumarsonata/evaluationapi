@@ -29,7 +29,7 @@ namespace evaluationapi
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "My API", Version = "V1" });
+                c.SwaggerDoc("v1", new Info { Title = "My API1", Version = "V1" });
             });
         }
 
