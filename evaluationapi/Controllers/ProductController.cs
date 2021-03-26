@@ -18,15 +18,15 @@ namespace eValuate.WebApi.Controllers
             _productRepository = productRepository;
         }
 
-        [HttpGet("Products")]
+        //[HttpGet("Products")]
         public async Task<ActionResult<IEnumerable<Product>>> GellAll()
         {
             var products = await _productRepository.GetAllProducts();
             return Ok(products);
         }
 
-        [HttpGet]
-        [Route("{id}")]
+        //[HttpGet]
+        //[Route("{id}")]
         public async Task<ActionResult<Product>> GetById(int id)
         {
             var product = await _productRepository.GetById(id);
@@ -34,14 +34,15 @@ namespace eValuate.WebApi.Controllers
             return new JsonResult(product);
         }
 
-        [HttpPost("addproduct")]
-        [Consumes("application/json")]
+        //[HttpPost("addproduct")]
+        //[Consumes("application/json")]
         public async Task<ActionResult> AddProduct(Product entity)
         {
             await _productRepository.AddProduct(entity);
             return Ok(entity);
         }
-        [HttpPut("{id}")]
+
+        //[HttpPut("{id}")]
         public async Task<ActionResult<Product>> Update(Product entity, int id)
         {
             if (id != entity.Id)
@@ -61,7 +62,9 @@ namespace eValuate.WebApi.Controllers
 
             
         }
-        [HttpDelete("{id}")]
+
+
+        //[HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
             
