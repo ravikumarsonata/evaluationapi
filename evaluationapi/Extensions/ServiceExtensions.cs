@@ -12,7 +12,7 @@ namespace eValuate.WebApi.Extensions
         {
             services.AddSwaggerGen(c =>
             {
-                c.IncludeXmlComments(string.Format(@"{0}\eValuate_WebApi.xml", System.AppDomain.CurrentDomain.BaseDirectory));
+                //c.IncludeXmlComments(string.Format(@"{0}\eValuate_WebApi.xml", System.AppDomain.CurrentDomain.BaseDirectory));
             });
         }
     }
