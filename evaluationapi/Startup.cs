@@ -16,6 +16,8 @@ using eValuate.WebApi.Interfaces;
 using eValuate.WebApi.Repositories;
 using eValuate.WebApi.Services.Interfaces;
 using eValuate.WebApi.Services.Queries;
+using evaluationapi.Interfaces;
+using evaluationapi.Repositories;
 
 namespace evaluationapi
 {
@@ -34,6 +36,7 @@ namespace evaluationapi
             services.AddTransient<ICommandText, CommandText>();
             //services.AddTransient<IProductRepositoryAsync, ProductRepositoryAsync>();
             services.AddTransient<IUserRepositoryAsync, UserRepositoryAsync>();
+            services.AddTransient<IQuestionTypeRepositoryAsync, QuestionTypeRepositoryAsync>();
 
             services.AddMvc();
             services.AddControllers();
