@@ -12,10 +12,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using eValuate.WebApi.Extensions;
-using eValuate.WebApi.Interfaces;
-using eValuate.WebApi.Repositories;
-using eValuate.WebApi.Services.Interfaces;
-using eValuate.WebApi.Services.Queries;
+using MySqlConnector;
+using eValuate.Repository;
 
 namespace evaluationapi
 {
@@ -33,7 +31,8 @@ namespace evaluationapi
         {
             services.AddTransient<ICommandText, CommandText>();
             //services.AddTransient<IProductRepositoryAsync, ProductRepositoryAsync>();
-            services.AddTransient<IUserRepositoryAsync, UserRepositoryAsync>();
+            services.AddTransient<IQuestionnaire, QuestionnaireRepository>();
+            services.AddTransient<MySqlConnection>(_ => new MySqlConnection(Configuration["ConnectionStrings:WorkmateConnection"]));
 
             services.AddMvc();
             services.AddControllers();

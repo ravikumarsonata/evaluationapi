@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "evaluationapi", "evaluationapi\evaluationapi.csproj", "{EBD75785-A4C1-4CE4-B0CC-C152774871AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "evaluationapi", "evaluationapi\evaluationapi.csproj", "{EBD75785-A4C1-4CE4-B0CC-C152774871AE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eValuate.Repository", "eValuate.Repository\eValuate.Repository.csproj", "{4F64B196-4F38-46BA-A3F3-CDAF752BB4D5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eValuate.Domain", "eValuate.Domain\eValuate.Domain.csproj", "{98FFA2F6-4C2C-4363-9834-9D8DCE762E34}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{EBD75785-A4C1-4CE4-B0CC-C152774871AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBD75785-A4C1-4CE4-B0CC-C152774871AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBD75785-A4C1-4CE4-B0CC-C152774871AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F64B196-4F38-46BA-A3F3-CDAF752BB4D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F64B196-4F38-46BA-A3F3-CDAF752BB4D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F64B196-4F38-46BA-A3F3-CDAF752BB4D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F64B196-4F38-46BA-A3F3-CDAF752BB4D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98FFA2F6-4C2C-4363-9834-9D8DCE762E34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98FFA2F6-4C2C-4363-9834-9D8DCE762E34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98FFA2F6-4C2C-4363-9834-9D8DCE762E34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98FFA2F6-4C2C-4363-9834-9D8DCE762E34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

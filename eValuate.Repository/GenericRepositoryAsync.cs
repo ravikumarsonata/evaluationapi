@@ -6,10 +6,11 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace eValuate.WebApi.Repositories
+namespace eValuate.Repository
 {
     public class GenericRepositoryAsync
     {
+
         private readonly IConfiguration _configuration;
         private readonly string _connectionString;
         protected GenericRepositoryAsync(IConfiguration configuration)
@@ -81,5 +82,6 @@ namespace eValuate.WebApi.Repositories
                 throw new Exception(String.Format("{0}.WithConnection() experienced a SQL exception (not a timeout)", GetType().FullName), ex);
             }
         }
+
     }
 }

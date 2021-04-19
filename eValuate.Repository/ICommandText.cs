@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace eValuate.WebApi.Services.Interfaces
+namespace eValuate.Repository
 {
     public interface ICommandText
     {
@@ -15,5 +15,6 @@ namespace eValuate.WebApi.Services.Interfaces
 
         // GBW Database
         string GetUsers { get; }
+        string AddFFQTemplate { get; }
     }
 }
