@@ -30,9 +30,9 @@ namespace evaluationapi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<ICommandText, CommandText>();
-            //services.AddTransient<IProductRepositoryAsync, ProductRepositoryAsync>();
             services.AddTransient<IQuestionnaire, QuestionnaireRepository>();
             services.AddTransient<MySqlConnection>(_ => new MySqlConnection(Configuration["ConnectionStrings:WorkmateConnection"]));
+            services.AddTransient<IQuestionTypeRepositoryAsync, QuestionTypeRepositoryAsync>();
 
             services.AddMvc();
             services.AddControllers();
