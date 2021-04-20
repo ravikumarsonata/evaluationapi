@@ -29,6 +29,13 @@ namespace evaluationapi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(c => c.AddPolicy("Policy", builder =>
+              {
+
+                  builder.AllowAnyOrigin()
+                  .AllowAnyMethod()
+                  .AllowAnyHeader();
+              }));
             services.AddTransient<ICommandText, CommandText>();
             services.AddTransient<IQuestionnaire, QuestionnaireRepository>();
             services.AddTransient<MySqlConnection>(_ => new MySqlConnection(Configuration["ConnectionStrings:WorkmateConnection"]));
@@ -59,6 +66,8 @@ namespace evaluationapi
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors("Policy");
 
             app.UseAuthorization();
 
