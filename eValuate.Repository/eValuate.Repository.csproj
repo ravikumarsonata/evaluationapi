@@ -17,10 +17,4 @@
     <ProjectReference Include="..\eValuate.Domain\eValuate.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="eValuate.Domain">
-      <HintPath>..\eValuate.Domain\bin\Debug\netcoreapp5.0\eValuate.Domain.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
 </Project>

@@ -39,7 +39,7 @@ namespace evaluationapi
               }));
 
             services.AddSingleton(Configuration);
-            services.AddTransient<IQuestionnaire, QuestionnaireRepository>();
+
             services.AddTransient<MySqlConnection>(_ => new MySqlConnection(Configuration["ConnectionStrings:WorkmateConnection"]));
 
             ServiceConfigurationExtension.AddApplicationSpecificServices(services, Configuration);

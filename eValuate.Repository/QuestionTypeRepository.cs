@@ -1,5 +1,5 @@
 ﻿using Dapper;
-using eValuat.Domain;
+using eValuate.Domain;
 using eValuate.Common;
 using Microsoft.Extensions.Configuration;
 using System;
