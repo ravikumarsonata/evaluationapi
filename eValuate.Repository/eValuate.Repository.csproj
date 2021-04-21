@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="eValuat.Domain">
-      <HintPath>..\eValuate.Domain\bin\Debug\netcoreapp3.1\eValuate.Domain.dll</HintPath>
+    <Reference Include="eValuate.Domain">
+      <HintPath>..\eValuate.Domain\bin\Debug\net5.0\eValuate.Domain.dll</HintPath>
     </Reference>
   </ItemGroup>
 

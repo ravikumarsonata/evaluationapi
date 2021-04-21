@@ -21,15 +21,15 @@ namespace eValuate.Repository
             _connectionString = _configuration.GetConnectionString("DefaultConnection");
         }
 
-        public List<T> GetAll<T>(string query, DynamicParameters sp_params, CommandType commandType = CommandType.StoredProcedure)
+        public List<QuestionType> GetAll<QuestionType>(string query, DynamicParameters sp_params, CommandType commandType = CommandType.StoredProcedure)
         {
             using IDbConnection db = new SqlConnection(_connectionString);
-            return db.Query<T>(query, sp_params, commandType: commandType).ToList();
+            return db.Query<QuestionType>(query, sp_params, commandType: commandType).ToList();
         }
 
-        public T execute_sp<T>(string query, DynamicParameters sp_params, CommandType commandType = CommandType.StoredProcedure)
+        public QuestionType execute_sp<QuestionType>(string query, DynamicParameters sp_params, CommandType commandType = CommandType.StoredProcedure)
         {
-            T result;
+            QuestionType result;
             using (IDbConnection dbConnection = new SqlConnection(_connectionString))
             {
                 if (dbConnection.State == ConnectionState.Closed)
@@ -37,8 +37,8 @@ namespace eValuate.Repository
                 using var transaction = dbConnection.BeginTransaction();
                 try
                 {
-                    dbConnection.Query<T>(query, sp_params, commandType: commandType, transaction: transaction);
-                    result = sp_params.Get<T>("retVal");
+                    dbConnection.Query<QuestionType>(query, sp_params, commandType: commandType, transaction: transaction);
+                    result = sp_params.Get<QuestionType>("retVal");
                     transaction.Commit();
                 }
                 catch (Exception ex)

@@ -9,9 +9,9 @@ namespace eValuate.Repository
 {
     public interface IQuestionTypeRepositoryAsync
     {
-        List<T> GetAll<T>(string query, DynamicParameters sp_params, CommandType commandType = CommandType.StoredProcedure);
+        List<QuestionType> GetAll<QuestionType>(string query, DynamicParameters sp_params, CommandType commandType = CommandType.StoredProcedure);
 
-        T execute_sp<T>(string query, DynamicParameters sp_params, CommandType commandType = CommandType.StoredProcedure);
+        QuestionType execute_sp<QuestionType>(string query, DynamicParameters sp_params, CommandType commandType = CommandType.StoredProcedure);
 
     }
 }

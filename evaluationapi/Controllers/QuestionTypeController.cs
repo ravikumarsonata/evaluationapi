@@ -11,6 +11,8 @@ using eValuate.Repository;
 
 namespace evaluationapi.Controllers
 {
+    [Route("api/QuestionType")]
+    [ApiController]
     public class QuestionTypeController : ControllerBase
     {
         private readonly IQuestionTypeRepositoryAsync _questionTypeRepository;
@@ -20,10 +22,10 @@ namespace evaluationapi.Controllers
             _questionTypeRepository = questionTypeRepository;
         }
 
-        [HttpGet(nameof(Get))]
-        public async Task<ActionResult<List<QuestionType>>> Get()
+        [HttpGet(nameof(GetAll))]
+        public async Task<ActionResult<List<QuestionType>>> GetAll()
         {
-            var result = await Task.FromResult(_questionTypeRepository.GetAll<QuestionType>($"Select * from Question_Type Where IsActive = 1", null, commandType: CommandType.Text));
+            var result = await Task.FromResult(_questionTypeRepository.GetAll<QuestionType>($"Select * From [dbo].[Question_Type]", null, commandType: CommandType.Text));
             return new JsonResult(result);
         }
 
