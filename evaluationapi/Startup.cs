@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using eValuate.WebApi.Extensions;
 using MySqlConnector;
 using eValuate.Repository;
+using evaluationapi.Dependency;
 
 namespace evaluationapi
 {
@@ -36,10 +37,12 @@ namespace evaluationapi
                   .AllowAnyMethod()
                   .AllowAnyHeader();
               }));
-            services.AddTransient<ICommandText, CommandText>();
+
+            services.AddSingleton(Configuration);
             services.AddTransient<IQuestionnaire, QuestionnaireRepository>();
             services.AddTransient<MySqlConnection>(_ => new MySqlConnection(Configuration["ConnectionStrings:WorkmateConnection"]));
-            services.AddTransient<IQuestionTypeRepositoryAsync, QuestionTypeRepositoryAsync>();
+
+            ServiceConfigurationExtension.AddApplicationSpecificServices(services, Configuration);
 
             services.AddMvc();
             services.AddControllers();

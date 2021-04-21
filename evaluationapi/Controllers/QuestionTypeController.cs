@@ -8,25 +8,37 @@ using System.Linq;
 using System.Threading.Tasks;
 using eValuat.Domain;
 using eValuate.Repository;
+using Microsoft.Extensions.Logging;
 
 namespace evaluationapi.Controllers
 {
-    [Route("api/QuestionType")]
+    [Route("api/[controller]")]
     [ApiController]
     public class QuestionTypeController : ControllerBase
     {
-        private readonly IQuestionTypeRepositoryAsync _questionTypeRepository;
+        private readonly IQuestionTypeRepository _questionTypeRepository;
+        private readonly ILogger _logger;
 
-        public QuestionTypeController(IQuestionTypeRepositoryAsync questionTypeRepository)
+        public QuestionTypeController(IQuestionTypeRepository questionTypeRepository, ILogger logger)
         {
             _questionTypeRepository = questionTypeRepository;
+            _logger = logger;
         }
 
-        [HttpGet(nameof(GetAll))]
-        public async Task<ActionResult<List<QuestionType>>> GetAll()
+        [HttpGet("GetAll")]
+        public async Task<ActionResult> GetAll()
         {
-            var result = await Task.FromResult(_questionTypeRepository.GetAll<QuestionType>($"Select * From [dbo].[Question_Type]", null, commandType: CommandType.Text));
-            return new JsonResult(result);
+
+            //return Ok(await _questionTypeRepository.GetAll());
+
+            var questionTypes = await _questionTypeRepository.GetAll();
+
+            if (questionTypes == null)
+            {
+                _logger.LogInformation("Record not found");
+            }
+
+            return Ok(questionTypes);
         }
 
         
