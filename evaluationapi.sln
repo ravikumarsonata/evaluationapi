@@ -9,9 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eValuate.Repository", "eVal
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eValuate.Domain", "eValuate.Domain\eValuate.Domain.csproj", "{98FFA2F6-4C2C-4363-9834-9D8DCE762E34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eValuate.Common", "eValuate.Common\eValuate.Common.csproj", "{BC374B60-F974-498E-BA5F-18FD26242B6E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eValuate.Core", "eValuate.Core\eValuate.Core.csproj", "{C695DFD6-7685-40B4-8551-58F4B23B6DFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eValuate.Common", "eValuate.Common\eValuate.Common.csproj", "{BC374B60-F974-498E-BA5F-18FD26242B6E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +33,6 @@ Global
 		{BC374B60-F974-498E-BA5F-18FD26242B6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC374B60-F974-498E-BA5F-18FD26242B6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC374B60-F974-498E-BA5F-18FD26242B6E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C695DFD6-7685-40B4-8551-58F4B23B6DFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C695DFD6-7685-40B4-8551-58F4B23B6DFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C695DFD6-7685-40B4-8551-58F4B23B6DFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C695DFD6-7685-40B4-8551-58F4B23B6DFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
