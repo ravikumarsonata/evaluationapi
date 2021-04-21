@@ -10,9 +10,10 @@ namespace eValuate.Domain
     public class QuestionType
     {
         [Key]
-        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int QuestionType_Id { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Question_Type_Id { get; set; }
         public string Response_Type_Text { get; set; }
         public string Response_Type_Value { get; set; }
+        public string Response_Type_Image { get; set; }
     }
 }

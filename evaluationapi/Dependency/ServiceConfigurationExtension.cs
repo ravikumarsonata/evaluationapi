@@ -27,7 +27,7 @@ namespace evaluationapi.Dependency
             services.AddTransient<IDbConnectionProvider, DbConnectionProvider>();
             services.AddTransient<IDapperSqlProvider, DapperSqlProvider>();
             services.AddTransient<IQuestionTypeRepository, QuestionTypeRepository>();
-            services.AddTransient<IQuestionnaire, QuestionnaireRepository>();
+            //services.AddTransient<IQuestionnaire, QuestionnaireRepository>();
         }
 
     }
