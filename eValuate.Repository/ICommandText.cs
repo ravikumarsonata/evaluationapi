@@ -16,5 +16,6 @@ namespace eValuate.Repository
         // GBW Database
         string GetUsers { get; }
         string AddFFQTemplate { get; }
+        string AddMOTLayout { get; }
     }
 }

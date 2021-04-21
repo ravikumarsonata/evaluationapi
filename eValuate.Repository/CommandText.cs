@@ -19,5 +19,8 @@ namespace eValuate.Repository
         public string AddFFQTemplate => @"insert into ffq_layout (qnr_ref, rest)
                                         values(@QnrRef, (select replace(b.rest, @CopyFromStr, @QnrRefStr) 
                                         from ffq_layout b where b.qnr_ref = @CopyFrom))";
+        public string AddMOTLayout => @"insert into mot_layout (qnr_ref, rest)
+                                        values(@QnrRef, (select replace(b.rest, @CopyFromStr, @QnrRefStr) 
+                                        from mot_layout b where b.qnr_ref = @CopyFrom))";
     }
 }

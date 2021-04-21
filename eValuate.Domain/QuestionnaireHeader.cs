@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace eValuat.Domain
+namespace eValuate.Domain
 {
     public class QuestionnaireHeader
     {

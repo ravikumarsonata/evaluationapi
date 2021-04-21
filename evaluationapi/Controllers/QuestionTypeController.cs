@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
-using eValuat.Domain;
+using eValuate.Domain;
 using eValuate.Repository;
 
 namespace evaluationapi.Controllers
