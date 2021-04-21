@@ -9,8 +9,12 @@ namespace eValuate.Repository
 {
     public interface IQuestionnaire
     {
-        T createQuestionnaire<T>(string query, DynamicParameters sp_params, CommandType commandType = CommandType.StoredProcedure);
-        List<T> getQnrList<T>(string query, DynamicParameters sp_params, CommandType commandType = CommandType.StoredProcedure);
+        Task questionnaireInsert(string query, DynamicParameters sp_params, CommandType commandType = CommandType.StoredProcedure);
+        List<QuestionnaireHeader> getQnrList<QuestionnaireHeader>(string query, DynamicParameters sp_params, CommandType commandType = CommandType.StoredProcedure);
+        List<Rpt_Questionnaire> getQtnList<Rpt_Questionnaire>(string query, DynamicParameters sp_params, CommandType commandType = CommandType.StoredProcedure);
         Task createFFQTemplate(int qnrRef, int copyFrom, string qnrRefString, string copyFromString);
+        Task createMOTLayout(int qnrRef, int copyFrom, string qnrRefString, string copyFromString);
+        int createNewTotalScoreMotText(string query, DynamicParameters sp_params, CommandType commandType = CommandType.StoredProcedure);
+        List<MLToolLock_ChangeInfo> getMLToolLockChangeInfo<MLToolLock_ChangeInfo>(string query, DynamicParameters sp_params, CommandType commandType = CommandType.StoredProcedure);
     }
 }
