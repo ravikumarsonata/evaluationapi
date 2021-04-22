@@ -24,10 +24,11 @@ namespace evaluationapi.Dependency
 
         private static void AddTransiantServices(IServiceCollection services)
         {
+            services.AddTransient<ICommandText, CommandText>();
             services.AddTransient<IDbConnectionProvider, DbConnectionProvider>();
             services.AddTransient<IDapperSqlProvider, DapperSqlProvider>();
             services.AddTransient<IQuestionTypeRepository, QuestionTypeRepository>();
-            //services.AddTransient<IQuestionnaire, QuestionnaireRepository>();
+            services.AddTransient<IQuestionnaire, QuestionnaireRepository>();
         }
 
     }
